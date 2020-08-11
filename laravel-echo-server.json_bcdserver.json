@@ -1,0 +1,37 @@
+{
+	"authHost": "https://dev.bcdpinpoint.com/influencer/public",
+	"authEndpoint": "/broadcasting/auth",
+	"clients": [
+		{
+			"appId": "7c3f45d35da82e4b",
+			"key": "c43bf4eb3029ce064feae58f2f607c8e"
+		}
+	],
+	"database": "redis",
+	"databaseConfig": {
+		"redis": {},
+		"sqlite": {
+			"databasePath": "/database/laravel-echo-server.sqlite"
+		}
+	},
+	"devMode": true,
+	"host": null,
+	"port": "6001",
+	"protocol": "https",
+	"socketio": {},
+	"secureOptions": 67108864,
+	"sslCertPath": "/var/www/certificate/STAR_bcdpinpoint_com.crt",
+	"sslKeyPath": "/var/www/certificate/bcdpinpoint_private_key.key",
+	"sslCertChainPath": "",
+	"sslPassphrase": "",
+	"subscribers": {
+		"http": true,
+		"redis": true
+	},
+	"apiOriginAllow": {
+		"allowCors": false,
+		"allowOrigin": "",
+		"allowMethods": "",
+		"allowHeaders": ""
+	}
+}

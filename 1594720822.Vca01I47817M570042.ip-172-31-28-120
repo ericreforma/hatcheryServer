@@ -1,0 +1,70 @@
+Return-Path: <>
+X-Original-To: ubuntu@thehatchery.app
+Delivered-To: ubuntu@thehatchery.app
+Received: by ip-172-31-28-120.us-east-2.compute.internal (Postfix)
+	id 8A2E047816; Tue, 14 Jul 2020 10:00:22 +0000 (UTC)
+Date: Tue, 14 Jul 2020 10:00:22 +0000 (UTC)
+From: MAILER-DAEMON@thehatchery.app (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: ubuntu@thehatchery.app
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="8428247813.1594720822/ip-172-31-28-120.us-east-2.compute.internal"
+Content-Transfer-Encoding: 8bit
+Message-Id: <20200714100022.8A2E047816@ip-172-31-28-120.us-east-2.compute.internal>
+
+This is a MIME-encapsulated message.
+
+--8428247813.1594720822/ip-172-31-28-120.us-east-2.compute.internal
+Content-Description: Notification
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+This is the mail system at host ip-172-31-28-120.us-east-2.compute.internal.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<sammy@thehatchery.app> (expanded from <sammy>): unknown user: "sammy"
+
+--8428247813.1594720822/ip-172-31-28-120.us-east-2.compute.internal
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; ip-172-31-28-120.us-east-2.compute.internal
+X-Postfix-Queue-ID: 8428247813
+X-Postfix-Sender: rfc822; ubuntu@thehatchery.app
+Arrival-Date: Tue, 14 Jul 2020 10:00:22 +0000 (UTC)
+
+Final-Recipient: rfc822; sammy@thehatchery.app
+Original-Recipient: rfc822;sammy@thehatchery.app
+Action: failed
+Status: 5.1.1
+Diagnostic-Code: X-Postfix; unknown user: "sammy"
+
+--8428247813.1594720822/ip-172-31-28-120.us-east-2.compute.internal
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+
+Return-Path: <ubuntu@thehatchery.app>
+Received: by ip-172-31-28-120.us-east-2.compute.internal (Postfix, from userid 1000)
+	id 8428247813; Tue, 14 Jul 2020 10:00:22 +0000 (UTC)
+Date: Tue, 14 Jul 2020 10:00:22 +0000
+To: sammy@thehatchery.app
+Subject: init
+User-Agent: s-nail v14.9.15
+Message-Id: <20200714100022.8428247813@ip-172-31-28-120.us-east-2.compute.internal>
+From: Ubuntu <ubuntu@thehatchery.app>
+
+init
+
+--8428247813.1594720822/ip-172-31-28-120.us-east-2.compute.internal--

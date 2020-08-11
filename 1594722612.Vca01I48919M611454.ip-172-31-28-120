@@ -1,0 +1,13 @@
+Return-Path: <ubuntu@thehatchery.app>
+X-Original-To: ubuntu
+Delivered-To: ubuntu@thehatchery.app
+Received: by ip-172-31-28-120.us-east-2.compute.internal (Postfix, from userid 1000)
+	id 932184891B; Tue, 14 Jul 2020 10:30:12 +0000 (UTC)
+Date: Tue, 14 Jul 2020 10:30:12 +0000
+To: ubuntu@thehatchery.app
+Subject: init
+User-Agent: s-nail v14.9.15
+Message-Id: <20200714103012.932184891B@ip-172-31-28-120.us-east-2.compute.internal>
+From: Ubuntu <ubuntu@thehatchery.app>
+
+init

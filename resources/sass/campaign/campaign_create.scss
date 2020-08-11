@@ -1,0 +1,1158 @@
+.campaign_create{
+    h3{
+        margin-bottom: 25px;
+    }
+    
+    .campaign_create_navigation{
+        width: 100%;
+        overflow: hidden;
+        background-color: #eceff3;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+            li{
+                float: left;
+                text-align: center;
+                background-color: transparent;
+                color: #a5a5a5;
+                padding: 5px 30px;
+                font-size: 15px;
+                text-transform: uppercase;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    background-color: #fff;
+                }
+            }
+            li.active{
+                background-color: #fff;
+                color: $blue;
+                font-weight: 500;
+                border-bottom-color: $blue;
+                
+            }
+            li.enabled{
+                color: $blue;
+                cursor: pointer;
+                background-color: #d4ebff;
+            }
+        }
+    }
+    .campaign_create_content{
+       
+        background-color: #fff;
+        .campaign_create_container{
+            padding: 25px;
+            .schedule_label{
+                display: flex;
+                label{
+                    flex: 1;
+                }
+                .schedule_button_container{
+                    flex: 1;
+                    text-align: right;
+                }
+            }
+            .schedule_list_container{
+                margin-top: 25px;
+                margin-bottom: 25px;
+                box-shadow: 4px 2px 9px #40404024;
+                border: 1px solid #d8d8d8;
+                
+                .schedule_list_header{
+                    padding: 5px 20px;
+                    background-color: #eee;
+                    padding-right: 30px;
+                    display: flex;
+                    border-bottom: 1px solid #d8d8d8;
+                    .date_head{
+                        flex: 2;
+                        text-align: center;
+                        font-weight: bold;
+                        color: #6f6f6f;
+                    }
+                    .breaktime_head, .option_head, .work_head{
+                        flex: 1;
+                    }
+                }
+                .schedule_list_body{
+                    padding: 10px;
+                    padding-bottom: 7px;
+                    max-height: 500px;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                    
+                    /* Track */
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1; 
+                    }
+                    
+                    /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: #888; 
+                    }
+                    
+                    /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #555; 
+                    }
+                    .date_item{
+                        display: flex;
+                        padding: 11px 10px;
+                        transition: all 0.2s ease-in;
+                        margin-bottom: 3px;
+                        border: 1px solid #d8d8d8;
+                        &:hover{
+                            background-color: #e7f5ff;
+                            border: 1px solid #4398ec;
+                            .options_value{
+                                button.dropdown-toggle{
+                                    visibility: visible;
+                                }
+                            }
+                            
+                        }
+                        .date_column{
+                            font-size: 14px;
+                            flex: 2;
+                        }
+                        .date_value{
+                            font-size: 18px;
+                            font-weight: bold;
+                            line-height: 1;
+                            padding-left: 20px;
+                            padding-top: 15px;
+                            span{
+                                font-weight: normal;
+                                font-size: 12px;
+                            }
+                        }
+                        .time_value{
+                            flex: 2;
+                            text-align: center;
+                            .time_row{
+                                display: inline-block;
+                            }
+                        }
+                        .options_value{
+                            flex: 1;
+                            text-align: center;
+                            button.dropdown-toggle{
+                                visibility: hidden;
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                background: none;
+                                border-radius: 100%;
+                                width: 30px;
+                                height: 30px;
+                                padding-left: 12px;
+                                padding: 0;
+                                padding-left: 2px;
+                                margin-top: 15px;
+                                padding-top: 3px;
+                                outline: none;
+                                
+                                &::after{
+                                    content: '';
+                                    border: 0;
+                                }
+                            }
+                        }
+
+                        .break_value{
+                            flex: 1;
+                            select{
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                display: block;
+                                margin: auto;
+                                width: 60px;
+                                height: auto;
+                                padding: 0;
+                                font-size: 21px;
+                                text-align: center;
+                                margin-top: 13px;
+                                background-color: transparent;
+                                border: 1px solid transparent;
+                                cursor: pointer;
+                                text-indent: 17px;
+                                transition: all 0.2s ease-in;
+                                &:hover{
+                                    border: 1px solid #999;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                        .work_value{
+                            flex: 1;
+                            .total_work_hours{
+                                margin-top: 14px;
+                                text-align: center;
+                                font-size: 21px;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                    .empty_schedule{
+                        margin-top: 55px;
+                        margin-bottom: 55px;
+                        text-align: center;
+                        color: #989898;
+                    }
+                }
+                
+            }
+            
+        }
+        .requirement_wrapper{
+            border-left: 1px solid #eee;
+            .requirement_container{
+                .daterangepicker-group{
+                    border: 1px solid #d8d8d8;
+                    .DateInput_input{
+                        padding: 3px 12px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        
+        .campaign_title{
+            margin-bottom: 55px;
+            img{
+                border-radius: 100%;
+                width: 60px;
+                height: 60px;
+                float: left;
+            }
+            input{
+                float: left;
+                border: 0;
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 1px solid #999;
+                font-size: 25px;
+                background-color: transparent;
+                width: 500px;
+                margin-bottom: 25px;
+            }
+            svg{
+                margin-top: 28px;
+                margin-left: 6px;
+
+            }
+        }
+
+        .campaign_create_body{
+            input[type="number"], .number{
+                text-align: right;
+            }
+            .info{
+                color: #c1c1c1;
+                appearance: none;
+                i{
+                    margin-top: 12px;
+                    cursor: pointer;
+                    appearance: none;
+                }
+            }
+           .form-group{
+                display: inline-block;
+                width: 100%;
+                >label{
+                    margin-top: 5px;
+                }
+            }
+           
+            .campaign_create_card{
+                width: 600px;
+                display: block;
+                margin: auto;
+            }
+            .image_upload_label{
+                background-color: #0061cc;
+                border: 1px solid #0061cc;
+                color: #fff;
+                padding: 6px 14px;
+                border-radius: 5px;
+                display: block;
+                width: 166px;
+                text-align: center;
+            }
+            .image_upload_container{
+                width: 100%;
+                min-height: 100px;
+                position: relative;
+                border: 5px dashed #eee;
+                display: inline-block;
+                >div{
+                    width: 300px;
+                    height: 170px;
+                    float: left;
+                    margin: 5px;
+                    text-align: center;
+                    background-color: #eee;
+                    position: relative;
+                    
+                    .close_container{
+                        position: absolute;
+                        z-index: 1;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        background-color: #999;
+                        cursor: pointer;
+                        i{
+                            
+                            font-size: 50px;
+                            color: #fff;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    &:hover{
+                        .close_container{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    height: auto;
+                    
+                }
+            }
+            #image{
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                z-index: -3;
+                left: -1000;
+            }
+            .i{
+                font-size: 12px;
+                color: #525252;
+            }
+
+            .calendar{
+                svg{
+                    position: absolute;
+                    top: 7px;
+                    right: 23px;
+                    color: #3f8eff;
+                }
+            }
+            .gender_form_group{
+                margin-bottom: 8px;
+                .gender-group{
+                    display: flex;
+                    label{
+                        font-weight: normal;
+                    }
+                }
+            }
+            
+            .campaign_budget{
+                padding: 25px;
+                .row{
+                    >div{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                }
+                
+                .costing_header{
+                    text-align: center;
+                    background: #eee;
+                    padding: 12px 0;
+                }
+                .custom-checkbox{
+                    label{
+                        margin-left: 20px;
+                        width: 100%;
+                        text-align: center;
+                        cursor: pointer;
+                        i{
+                            
+                            font-size: 55px;
+                            display: block;
+                            text-align: center;
+                        }
+                        &:before, &:after{
+                            transform: translateY(-50%);
+                            top: 50%;
+
+                        }
+                    }
+                }
+                .custom-checkbox.selected{
+                    label{
+                        i{
+                            color: #0079ff;
+                        }
+                    }
+                }
+                .quantity{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 21px;
+                    font-weight: bold;
+                    margin-top: 3px;
+                }
+                .cost_per_unit{
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    margin-top: 3px;
+                    .unit{
+                       flex: 1;
+                        margin-top: 5px;
+                    }
+                    .cost{
+                        flex: 2;
+                        text-align: right;
+                        margin:0 15px;
+                        font-size: 21px;
+                        font-weight: bold;
+                    }
+                    .per{
+                       flex: 3;
+                       margin-top: 5px;
+                    }
+                }
+            
+            }
+
+            .hashtag_taginput{
+                ul{
+                    li{
+                        background-color: #fff16d;
+                        color: #000;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            .mention_taginput{
+                ul{
+                    li{
+                        background-color: #90fffd;
+                        color: #000;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            .campaign_create_summary{
+                padding-top: 55px;
+                h1{
+                    font-weight: normal;
+                    color: #585858;
+                    margin-bottom: 25px;
+                    
+                    text-align: center;
+                }
+                .summary_key {
+                    text-align: right;
+                }
+
+                .summary_value{
+                    text-align: left;
+                }
+                .summary_body{
+                    padding-bottom: 55px;
+                    h4{
+                        background-color: #00b2ff;
+                        color: #fff;
+                        padding: 5px 18px;
+                        margin-top: 19px;
+                        margin-bottom: 16px;
+                    }
+                    .summary_content{
+                        padding: 0 20px;
+                        .table{
+                            color:  #353535;
+                        }
+                        .socialMedia{
+                            display: inline-block;
+                            margin: 5px;
+                            >div{
+                                padding: 7px 11px;
+                                background-color: #eceff3;
+                                border-radius: 22px;
+                            }
+                            img{
+                                max-width: 30px;
+                                margin-right: 8px;
+                                float: left;
+                                margin-right: 12px;
+                                margin-bottom: 12px;
+                            }
+                        }
+                        .publish_skill_container{
+                                margin: 0;
+                                padding: 0;
+                                li{
+                                    float: left;
+                                    background-color: #3f8eff;
+                                    padding: 4px 6px;
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                    font-size: 11px;
+                                    color: #fff;
+                                    list-style: none;
+                                }
+                        }
+                        .schedule_table{
+                            max-height: 400px;
+                            overflow-y: scroll;
+                        }
+
+                    }
+                    .row{
+                        margin-bottom: 20px;
+                        >div:first-child{
+                            color: #696969;
+                        }
+                        >div:nth-child(2){
+                            font-weight: bold;
+                            color: #353535;
+                        }
+                        img{
+                            max-height: 100px;
+                        }   
+                        
+                    }
+                    .category_container{
+                        display: inline-block;
+                        .category{
+                            float: left;
+                            background-color: $blue;
+                            color: #fff;
+                            padding: 5px 10px;
+                            margin-bottom: 5px;
+                            margin-right: 5px;
+                        
+                        }
+                    }
+                }
+                .jobsTable{
+                    tr{
+                        td{
+                            span{
+                                background-color: #8d9aa2;
+                                padding: 3px 6px;
+                                color: #fff;
+                                margin-right: 3px;
+                                margin-bottom: 3px;
+                                display: inline-block;
+                                border-radius: 6px;
+                            }
+                        }
+                    }
+                }
+                .jobScheduleTable_jobColumn{
+                    float: left;
+                    width: 200px;
+                    .jobScheduleTable_jobColumn_{
+                        height: 115px;
+                        border: 1px solid #eceff2;
+                        padding: 17px;
+                        background-color: #f8f9fb;
+                        .jobScheduleTable_jobColumn_description{
+                            font-weight: bold;
+                        }
+                        p{
+                            margin-bottom: 0;
+                        }
+                        
+                    }
+                    .jobScheduleTable_jobColumn_title{
+                        height: 96px;
+                    }
+                }
+                .jobScheduleTable{
+                    float: right;
+                    overflow-x: scroll;
+                    .jobScheduleTable_body{
+                        display: block;
+                        .jobScheduleTable_body_row{
+                            >div{
+                                width: 200px;
+                                border: 1px solid #eceff2;
+                                float: left;
+                                padding: 17px;
+                                .time_container{
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .jobScheduleTable_head{
+                        background-color: #f8f9fb;
+                        display: block;
+                        
+                        >div{
+                            width: 200px;
+                            text-align: center;
+                            padding: 10px 0;
+                            float:left;
+                            border: 1px solid #eceff2;
+                            background-color: #f8f9fb;
+                          
+                        }
+                    }
+                }
+            }
+            .event_jobCosting{
+                padding: 25px;
+                *{
+                    font-size: 15px;
+                }
+                .job-costing-header{
+                    font-weight: bold;
+                    font-size: 20px;
+                    background-color: #eee;
+                    padding-bottom: 14px !important;
+                    padding: 14px;
+                    text-align: center;
+                    .row{
+                        >div{
+                            align-self: center;
+
+                        }
+                    }
+                }
+                .costing-row{
+                    border: 1px solid #d8d8d8;
+                    margin: 0;
+                    padding: 15px 25px;
+                    margin: 10px 0;
+                    box-shadow: 2px 3px 8px rgba(204, 204, 204, 0.4);
+                    position: relative;
+                    *{
+                        font-size: 13px;
+                    }
+                    a{
+                        text-align: right;
+                    }
+                    >div{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        input[type=number]{
+                            text-align: center;
+                            appearance: none;
+                            &::-webkit-inner-spin-button, 
+                            &::-webkit-outer-spin-button { 
+                                -webkit-appearance: none; 
+                                margin: 0; 
+                            }
+                        }
+
+                    }
+                    .job-title{
+                        display: block;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+                .jobcost_container{
+                    
+                    width: 100%;
+                    .cost{
+                        width: 100%;
+                        font-size: 18px;
+                    }
+                }
+                .rate-container{
+                    max-width: 180px;
+                    border: 1px solid #d8d8d8;
+                    display: flex;
+                    margin: auto;
+                    .currency{
+                        padding: 7px 10px;
+                        background: #eee;
+                        border-right: 1px solid #d8d8d8;
+                    }
+                    >div, >input{
+                        float: left;
+                    }
+                    select, input{
+                        padding: 3px;
+                        border: 0;
+                        display: inline-block;
+                        flex: 1;
+                        outline: none;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .input_ratevalue{
+                        width: 60px;
+                    }
+                    .input_rate{
+                        width: 75px;
+                        border-left: 1px solid #d8d8d8;
+                    }
+                }
+                .cost{
+                    display: inline-block;
+                    >div{
+                        text-align: right;
+                    }
+                    .value{
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                }
+                .removeSkill{
+                    font-size: 13px;
+                }
+                .overallCost{
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .overall_cost_container{
+                    margin-top: 55px;
+                }
+            }
+
+            .empty_job{
+                display: flex;
+                box-shadow: 2px 3px 8px rgba(204, 204, 204, 0.4);
+                background-color: #fff;
+                margin-top: 25px;
+                border: 1px solid #d8d8d8;
+                p{
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    padding: 57px 0;
+                    margin: 0;
+                }
+            }
+
+            // SCHEDULING PROCESS
+            .buttonContainer{
+                width: 100%;
+                margin-top: 30px;
+                button{
+                    width: 400px;
+                    float: right;
+                }
+            }
+            .scheduling{
+                width: 100%;
+                display: flex;
+                overflow: scroll;
+                flex-direction: column;
+                >div{
+                    height: 100%;
+                    display: flex;
+                    .scheduleBody{
+                        display: flex;
+                        
+                    }
+                }
+                .jobColumn{
+                    background-color: #f7fbff;
+                    >div{
+                        width: 250px;
+                        .jobItem{
+                            text-align: left;
+                            padding: 10px;
+                            background-color: #f7fbff;
+                            height: 170px;
+                            border-bottom: 1px solid #eee;
+                            border-right: 1px solid #eee;
+                            >span{
+                                font-weight: bold;
+                                font-size: 15px;
+                            }
+                            table{
+                                width: 100%;
+                                tr{
+                                    &:hover{
+                                        background-color: #eee;
+                                    }
+                                    td{
+                                        input{
+                                            float: right;
+                                            width: 60px;
+                                            background-color: #f7fbff;
+                                            border: 1px solid #cacaca;
+                                            &:hover{
+                                                background-color: #fff;
+                                                border-color: #999;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .rate{
+                                >span:first-child{
+                                    margin-right: 3px;
+                                }
+                                span, p, input{
+                                    font-size: 15px;
+                                    margin-bottom: 0;
+                                }
+                                
+                            }
+                        }
+                        .jobItemTitle{
+                            height: 90px;
+                        }
+                    }
+                    height: auto;
+                }
+                .scheduleTable{
+                    flex-grow: 1;
+                    .scheduleTableWrapper{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    th{
+                        width: 200px;
+                        padding: 20px;
+                        background-color: #f7fbff;
+                        border-bottom: 1px solid #eee;
+                        border-right: 1px solid #eee;
+                        p{
+                            text-align: center;
+                            margin-bottom: 0;
+                            font-size: 19px;
+                            color: #444;
+                        }
+                        p:nth-child(2){
+                          font-size: 14px;
+                          color: #999;  
+                        }
+                    }
+                    th.onHover{
+                        background-color: #e0ecf9;
+                    }
+                    tr{
+                        background-color: #fbfbfb;
+                        &:hover{
+                            background-color: #f5f1f1;
+                        }
+                        td{
+                            border-right: 1px solid #eee;
+                            border-bottom:  1px solid #eee;
+                            padding: 10px;
+                            position: relative;
+                            .scheduleCard{
+                                display: inline-block;
+                                width: 250px;
+                                position: relative;
+                                background-color: #fff;
+                                padding: 9px;
+                                border-radius: 5px;
+                                box-shadow: 1px 1px 5px -3px #40404080;
+                                transition: box-shadow 0.2s ease-in-out;
+                                padding-top: 20px;
+                                &:hover{
+                                    box-shadow: 1px 1px 15px -3px #40404080;
+                                    .remove, .options{
+                                        opacity: 1;
+                                    }
+                                }
+                                .remove{
+                                    z-index: 1;
+                                    opacity: 0;
+                                    position: absolute;
+                                    right: 10px;
+                                    top: 5px;
+                                    font-size: 12px;
+                                    color: red;
+                                    cursor: pointer;
+                                }
+                                .time{
+                                    display: inline-block;
+                                    z-index: 0;
+                                    position: relative;
+                                    padding-left: 16px;
+
+                                    padding-top: 4px;
+                                    &:after{
+                                        width: 7px;
+                                        height: 100%;
+                                        background-color: #24ce24;
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        top: 0;
+                                        border-radius: 10px;
+                                    }
+                                    .time_container{
+                                        float: left;
+                                        width: 98px;
+                                    }
+                                    .break{
+                                        float: left;
+                                        opacity: 1;
+                                        padding-left: 7px;
+                                        position: relative;
+                                        >table{
+                                            background-color: #fff;
+                                            border: 0;
+                                            width: 100%;
+                                            tr{
+                                                background-color: #fff;
+                                                background: transparent;
+                                            }
+                                            td{
+                                                border: 0 !important;
+                                                border-bottom: 0;
+                                                padding: 2px 0;
+                                            }
+                                            td:first-child{
+                                                text-align: left;
+                                                font-size: 11px;
+                                                color: #999;
+                                                line-height: 12px;
+                                                margin: 0;
+                                            }
+                                            td:last-child{
+                                                text-align: center;
+                                            }
+                                            input{
+                                                font-size: 12px;
+                                                width: 41px;
+                                                display: block;
+                                                margin: auto;
+                                            }
+                                               
+                                        }
+                                        
+                                    }
+
+                                    
+                                }
+
+                                .totals{
+                                    padding-left: 17px;
+                                    font-size: 17px;
+                                    color: #797777;
+                                }
+                                .break.hide{
+                                    opacity: 0;
+                                }
+                                
+                            }
+
+                            .scheduleCardAdd{
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 100%;
+                                >div{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                i{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    opacity: 0;
+                                    font-size: 55px;
+                                    color: green;
+                                    cursor: pointer;
+                                }
+                                &:hover{
+                                    i{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .campaign_create_footer{
+            background-color: #fff;
+            padding: 25px;
+            width: 100%;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: inline-block;
+            button{
+                width: 150px;
+            }
+            .campaign_create_footer_button_next{
+                float: right;
+            }
+        }
+
+        .error{
+            color: $red;
+            font-size: 12px;
+        }
+    }
+
+    .publishing{
+        text-align: center;
+        margin-bottom: 150px;
+        img{
+            display: block;
+            margin: auto;
+        }
+        h5{
+            font-size: 20px;
+            padding-bottom: 103px;
+        }
+    }
+}
+
+.modal_date{
+    .nav-tabs{
+        border-bottom: 0;
+        overflow: hidden;
+        .nav-item{
+            .nav-link{
+                padding: 3px 15px;
+                border-radius: 0;
+            }
+            .nav-link.active{
+                box-shadow: 4px 2px 9px #40404024;
+            }
+        }
+    }
+    .tab-content{
+        box-shadow: 4px 2px 9px #40404024;
+        padding: 55px 25px;
+        .SingleDatePicker{
+            display: block;
+            >div{
+                display: block;
+                .SingleDatePickerInput{
+                    display: flex;
+                    background-color: #5bc0de;
+                    border-radius: 5px;
+                    border: 0;
+                    overflow: hidden;
+                    .SingleDatePickerInput_calendarIcon{
+                        color: #fff;
+                        svg {
+                            fill: #FFF;
+                        }
+                    }
+                    .DateInput{
+                        flex: 1;
+                        .DateInput_input{
+                            display: block;
+                            background-color: #5bc0de;
+                            color: #fff;
+                            border: 0;
+                            
+                            cursor: pointer;
+                            &::placeholder{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .DateRangePicker{
+            display: block;
+            >div{
+                display: block;
+                .DateRangePickerInput{
+                    display: flex;
+                    background-color: #5bc0de;
+                    border-radius: 5px;
+                    border: 0;
+                    overflow: hidden;
+                    .DateRangePickerInput_calendarIcon,
+                    .DateRangePickerInput_arrow{
+                        color: #fff;
+                        svg {
+                            fill: #FFF;
+                        }
+                    }
+                    .DateRangePickerInput_arrow{
+                        margin-top: 10px;
+                    }
+                    .DateInput{
+                        flex: 1;
+                        .DateInput_input{
+                            display: block;
+                            background-color: #5bc0de;
+                            color: #fff;
+                            border: 0;
+                            
+                            cursor: pointer;
+                            &::placeholder{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .button_date_container{
+            display: inline-block;
+            width: 100%;
+            margin-top: 55px;
+            button{
+                float: right;
+            }
+        }
+
+        
+    }
+}
+.select_campaign_container{
+    background-color: #fff;
+    padding: 20px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    .createNewCard{
+        width: 200px;
+        padding: 20px;
+        float: left;
+        margin: 10px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        h4{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+        &:hover{
+            background-color: #d4ebff;
+        }
+    }
+}
+

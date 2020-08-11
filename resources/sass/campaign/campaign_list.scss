@@ -1,0 +1,283 @@
+.campaign_list_wrapper{
+    width: 100%;
+    .campaign_list_container{
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                padding: 13px 20px;
+                width: 100%;
+                box-shadow: 0px 0px 4px -2px rgba(0, 0, 0, 0.33);
+                margin-bottom: 10px;
+                background: #fff;
+                border-radius: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                &:hover{
+                    transform: scale(1.005);
+                    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.33);
+                }
+                >div{
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-right: 20px;
+                    color: #696969;
+                }
+                
+                
+            }
+        }
+    }
+    .campaign_pagination{
+        float: right;
+        margin-top: 20px;
+    }
+
+    .campaign_table_container{
+        padding: 15px;
+        background-color: #fff;
+        .campaign_table{
+            width: 100%;
+            thead{
+                background-color: #ebf5ff;
+                text-align: center;
+                tr{
+                    
+                    th{
+                        padding: 12px 0;
+                        color: #3e3c3c;
+                    }
+                }
+            }
+            tbody{
+                text-align: center;
+                tr{
+                    background-color: #fff;
+                    border-bottom: 1px solid #e9ebef;
+                    .table_name{
+                        text-align: left;
+                        font-weight: bold;
+                        padding-left: 25px;
+                        span{
+                            font-size: 18px;
+                        }
+                        .campaign_photo{
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            border-radius: 100%;
+                            width: 75px;
+                            height: 75px;
+                            margin-right: 10px;
+                            display: inline-block;
+                            vertical-align:middle 
+                        }
+                    }
+                    td.table_name{
+                        
+                    }
+                    td{
+                        padding: 12px 0;
+                    }
+                    
+                }
+            }
+        }
+
+        .campaign_table.socialmedia_table{
+            tbody{
+                
+                td.table_socialMedia{
+                    img{
+                        max-width: 35px;
+                        height: auto;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tableView{
+        .campaign_thumb{
+            border-radius: 100%;
+            width: 65px;
+            height: 65px;
+            overflow: hidden;
+            position: relative;
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .campaign_name{
+            width: 244px;
+    
+            h3{
+                margin-bottom: 0;
+                font-size: 18px;
+            }
+        }
+    
+        .campaign_socialMedia{
+            width: 75px;
+            text-align:  center;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    
+        .campaign_influencers{
+            width: 150px;
+            text-align:  center;
+            font-size: 28px;
+    
+        }
+        .campaign_status{
+            width: 75px;
+            text-align: center;
+    
+        }
+    
+        .campaign_deadline{
+            text-align:center;
+            width: 150px;
+            .deadline_date{
+                font-weight: bold;
+    
+            }
+            .deadline_time{
+                color: #565656;
+                font-size: 14px;
+            }
+        }
+    
+        
+        .campaign_list_header{
+            padding: 13px 20px;
+            display: inline-block;
+            background: #d4ebff;
+            .campaign_list_head{
+                float: left;
+                vertical-align: middle;
+                margin-right: 20px;
+                h5{
+                    font-size: 14px;
+
+                }
+            }
+            .campaign_name{
+                width: 328px;
+            }
+        }
+    }
+
+    .gridView{
+        .campaign_card{
+            overflow: hidden;
+            width: 100%;
+            border-radius: 4px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            display: inline-block;
+            cursor: pointer;
+            transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: 0px 0px 4px -2px rgba(0, 0, 0, 0.33);
+            color: #1d1d1d;
+            &:hover{
+                box-shadow: 3px 1px 8px 1px rgba(0, 0, 0, 0.18);
+            }
+            .campaign_card_header{
+                height: 190px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                .campaign_card_social_media{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+            }
+            .campaign_card_body{
+                padding: 15px 15px 0 15px;
+                height: 155px;
+                h3{
+                    font-size: 18px;
+                }
+                h4{
+                    font-size: 14px;
+                    color: #949494;
+                    margin-bottom: 0;
+                }
+                h5{
+                    font-size: 12px;
+                }
+                .influencer_count_container{
+                    margin-top: 25px;
+                    width: 100%;
+                    text-align: center;
+                    p{
+                        font-size: 34px;
+                        line-height: 0.5;
+                        margin-bottom: 0;
+                        span{
+                            font-size: 13px;
+                        }
+                    }
+                    
+                    
+                }
+            }
+            .campaign_card_footer{
+                width: 100%;
+                position: relative;
+                padding: 0 15px 15px 15px;
+                display: inline-block;
+                >div{
+                    display: inline-block;
+                    vertical-align: baseline;
+                }
+                hr{
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+                .campaign_card_deadline{
+                    float: left;
+                    span{
+                        font-size: 10px;
+                        color: #3a3939;
+                    }
+                    h4{
+                        margin: 0;
+                        font-size: 12px;
+                    }
+                }
+                .campaign_card_status{
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+    
+    .viewSwitcher{
+        width: 100%;
+        display: inline-block;
+        .btn-group{
+            float: right;
+        }
+    }
+    
+}

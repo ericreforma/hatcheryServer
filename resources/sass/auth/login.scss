@@ -1,0 +1,170 @@
+.login{
+    height: 100vh;
+    margin: 0;
+    background-color: #163767;
+    max-width: 100%;
+    .login-container{
+        width: 900px;
+        height: 700px;
+        background-color: #fff;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 4px 2px 14px #00000082;
+        >div{
+            height: 100%;
+            display: inline-block;
+        }
+        .login-image-container{
+            float: left;
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            .login-text-container{
+                position: absolute;
+                bottom: 25px;
+                display: inline-block;
+                left: 0;
+                padding: 36px;
+                *{
+                    color: #fff;
+                    text-align: left;
+                }
+                h2{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .login-form-container{
+            position: relative;
+            float: right;
+            width: 50%;
+            padding: 20px 60px;
+            padding-top: 48px;
+            .input-group-text{
+                background-color: #fff;
+                border: 0;
+                border-radius: 0;
+                *{
+                    color: #949494;
+                }
+            }
+            button, a{
+                height: 48px;
+                border-radius: 8px;
+            }
+            input{
+                outline: 0;
+                padding: 2px 20px;
+                padding-left: 4px;
+                text-align: left;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                color: #2d2d2d;
+                background: #fff;
+                height: 48px;
+                border-bottom: 1px solid #d0d0d0;
+            }
+            button{
+                display: block;
+                margin: auto;
+                width: 100%;
+                border: 0;
+                border-radius: 0;
+                color: #fff;
+                
+            }
+            .button_login{
+               
+                background: #d03a64;
+                margin-top: 35px;
+                img{
+                    max-width: 20px;
+                }
+                
+            }
+            .button_signup{
+               
+                background: #2e8c2d;
+                margin-top:35px;
+                img{
+                    max-width: 20px;
+                }
+            }
+            a{
+                width: 100%;
+                padding-top: 11px;
+                background-color: #38c172;
+                display: inline-block;
+                margin-top: 14px;
+                color: #fff;
+            }
+            h3{
+                color: #828282;
+                margin-bottom: 20px;
+            }
+            .error{
+                color: $red;
+            }
+            .or{
+                color: #929292;
+                margin-top: 56px;
+            }
+            .sma_button{
+                border-radius: 0;
+                img{
+                    margin-right: 10px;
+                    max-width: 25px;
+                }
+            }
+            .button_facebook{
+                background-color: #3b5998;
+                background: #3b5998;
+            }
+            .button_google{
+                background-color: #fff;
+                background: #fff;
+                color: #616161;
+            }
+            .cta{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                span{
+                    color: #929292;
+                }
+                button{
+                    display: inline-block;
+                    width: auto;
+                    color: #2d2d2d;
+                }
+            }
+            .signUpForm{
+                .firebase_error{
+                    width: 100%;
+                    top: 50px;
+                    text-align: center;
+                    margin: 0;
+                    font-size: 12px;
+                    color: red;
+                }
+                .form-group{
+                    position: relative;
+                    .sign_uperror{
+                        position: absolute;
+                        width: 100%;
+                        bottom: -19px;
+                        text-align: center;
+                        margin: 0;
+                        font-size: 12px;
+                        color: red;
+                    }
+                }
+                
+            }
+        }
+    }
+}

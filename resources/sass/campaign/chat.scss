@@ -1,0 +1,103 @@
+.chat_button{
+    span.fa{
+        font-size: 25px;
+
+    }
+    .dropdown-item{
+        width: 390px;
+        img{
+            max-width: 55px;
+            vertical-align: middle;
+            border-radius: 100%;
+            float: left;
+        }
+        p{
+            font-size: 20px;
+            padding-top: 12px;
+            margin-left: 72px;
+        }
+
+    }
+}
+
+.chat_wrapper{
+    position: fixed;
+    bottom: 0;
+    height: 375px;
+    width: 300px;
+    right: 0;
+    border: 1px solid #eee;
+    box-shadow: 1px -1px 13px #7372726b;
+    background-color: #fff;
+    overflow: hidden;
+    .chat_container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .chat_head{
+            padding:5px;
+            background-color: #3f8eff;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            img{
+                max-width: 30px;
+                border-radius: 100%;
+                margin-right: 12px;
+            }
+           
+            span{
+                font-weight: bold;
+            }
+        }
+        .chat_input_container{
+            position: absolute;
+            bottom: 0;
+            left:0;
+            right: 0;
+            display: inline-block;
+            z-index: 0;
+            input{
+                width: 100%;
+                padding: 12px 10px;
+                border: 0;
+                border-top: 1px solid #cacaca;
+            }
+        }
+        .chat_message_wrapper{
+            height: 282px;
+            width: 100%;
+            overflow-y: scroll;
+            flex-direction: column-reverse;
+            display: flex;
+            padding: 8px 12px;
+            .chat_message_container{
+                display: inline-block;
+                width: 100%;
+                .message_bubble{
+                    border-radius: 16px;
+                    padding: 6px 10px;
+                    max-width: 200px;
+                    margin-top: 10px;
+                }
+
+                .receiver_bubble{
+                    background-color: #eee;
+                    color: #000;
+                    float: left;
+                    
+                }
+                .sender_bubble{
+                    background-color: #3f8eff;
+                    color: #fff;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.hide_chat{
+    height: 40px;
+}
